@@ -80,5 +80,5 @@ def parse_document(text: str) -> (Document, str):
     
     children, text = res
 
-    return Document(None, children), text
+    return Document('Something', children), text
     

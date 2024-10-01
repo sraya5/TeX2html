@@ -26,9 +26,9 @@ def scan(node):
             last = scan(child)
         elif type(child) is FreeText:
             if last:
-                last.tail += FreeText.content
+                last.tail += child.content
             else:
-                element.text += FreeText.content
+                element.text += child.content
     return element
 
 
