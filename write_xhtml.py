@@ -48,7 +48,7 @@ def create_head(title='', css_path=''):
 
 
 def create_body(doc: Document):
-    body = Element('body')
+    body = Element('body', text='', tail='')
     for child in doc.children:
         child = scan(child)
         body.append(child)
