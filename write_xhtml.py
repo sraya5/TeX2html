@@ -13,6 +13,8 @@ def one_node(node):
         element = Element(NAME2TAG[node.environment_name]['tag'], {'class': node.environment_name}, text='', tail='')
     elif type(node) is Section:
         element = Element('section', text='', tail='')
+    elif type(node) is Document:
+        element = Element('body', text='', tail='')
     else:
         raise TypeError('invalid node')
     return element
@@ -47,18 +49,10 @@ def create_head(title='', css_path=''):
     return head
 
 
-def create_body(doc: Document):
-    body = Element('body', text='', tail='')
-    for child in doc.children:
-        child = scan(child)
-        body.append(child)
-    return body
-
-
 def convert(doc: Document, css_path=''):
     root = Element('html', {'xmlns': 'http://www.w3.org/1999/xhtml'})
     head = create_head(doc.title.title, css_path)
-    body = create_body(doc)
+    body = scan(doc)
     root.extend((head, body))
     tree = ElementTree(root)
     return tree
