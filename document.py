@@ -7,8 +7,8 @@ class Node:
 
 
 class Environment(Node):
-    def __init__(self, name: str):
-        self.name = name
+    def __init__(self, environment_name: str):
+        self.environment_name = environment_name
 
 
 @dataclass
@@ -24,7 +24,9 @@ class Title:
 
 
 class Document(Environment):
-    def __init__(self, title: Title):
+    def __init__(self, title: Title, children):
+        super().__init__(children)
+        self.environment_name = "document"
         self.title = title
 
 
