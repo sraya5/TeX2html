@@ -1,22 +1,22 @@
 {
   "body": {"tag":  "body"},
 
-  "title": {"tag": "h1", "rank": -1, "he": "כותרת"},
-  "author": {"tag": "div", "rank": -1, "he": "מחבר"},
-  "date": {"tag": "div", "rank": -1, "he": "כותרת"},
-  "abstract": {"tag": "div", "rank": -1, "he": "תקציר"},
+  "title": {"tag": "h1", "he": "כותרת"},
+  "author": {"tag": "div", "he": "מחבר"},
+  "date": {"tag": "div", "he": "כותרת"},
+  "abstract": {"tag": "div", "he": "תקציר"},
 
   "itemize": {"tag": "ul"},
   "enumerate": {"tag": "ol"},
   "lyxlist": {"tag": "div"},
 
-  "part": {"tag": "section", "rank": 0, "he": "חלק"},
-  "chapter": {"tag": "section", "rank": 1, "he": "פרק"},
-  "section": {"tag": "section", "rank": 2, "he": "סעיף"},
-  "subsection": {"tag": "section", "rank": 3, "he": "תת-סעיף"},
-  "subsubsection": {"tag": "section", "rank": 4, "he": "תת-תת-סעיף"},
-  "paragraph": {"tag": "section", "rank": 5, "he": "פסקה"},
-  "subparagraph": {"tag": "section", "rank": 6, "he": "תת-פסקה"},
+  "part": {"tag": "div", "he": "חלק"},
+  "chapter": {"tag": "div", "he": "פרק"},
+  "section": {"tag": "h2", "he": "סעיף"},
+  "subsection": {"tag": "h3", "he": "תת-סעיף"},
+  "subsubsection": {"tag": "h4", "he": "תת-תת-סעיף"},
+  "paragraph": {"tag": "h5", "he": "פסקה"},
+  "subparagraph": {"tag": "h6", "he": "תת-פסקה"},
 
   "thm": {"tag": "div", "he": "משפט", "en": "Theorem"},
   "cor": {"tag": "div", "he": "מסקנה", "en": "Corollary"},
