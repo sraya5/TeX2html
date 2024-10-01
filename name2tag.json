@@ -1,0 +1,36 @@
+{
+  "body": {"tag":  "body"},
+
+  "title": {"tag": "h1", "rank": -1, "he": "כותרת"},
+  "author": {"tag": "div", "rank": -1, "he": "מחבר"},
+  "date": {"tag": "div", "rank": -1, "he": "כותרת"},
+  "abstract": {"tag": "div", "rank": -1, "he": "תקציר"},
+
+  "itemize": {"tag": "ul"},
+  "enumerate": {"tag": "ol"},
+  "lyxlist": {"tag": "div"},
+
+  "part": {"tag": "section", "rank": 0, "he": "חלק"},
+  "chapter": {"tag": "section", "rank": 1, "he": "פרק"},
+  "section": {"tag": "section", "rank": 2, "he": "סעיף"},
+  "subsection": {"tag": "section", "rank": 3, "he": "תת-סעיף"},
+  "subsubsection": {"tag": "section", "rank": 4, "he": "תת-תת-סעיף"},
+  "paragraph": {"tag": "section", "rank": 5, "he": "פסקה"},
+  "subparagraph": {"tag": "section", "rank": 6, "he": "תת-פסקה"},
+
+  "thm": {"tag": "div", "he": "משפט", "en": "Theorem"},
+  "cor": {"tag": "div", "he": "מסקנה", "en": "Corollary"},
+  "lem": {"tag": "div", "he": "למה", "en": "Lemma"},
+  "prop": {"tag": "div", "he": "משפטון", "en": "Proposition"},
+  "conjecture": {"tag": "div", "he": "השערה", "en": "Conjecture"},
+  "defn": {"tag": "div", "he": "הגדרה", "en": "Definition"},
+  "example": {"tag": "div", "he": "דוגמה", "en": "Example"},
+  "problem": {"tag": "div", "he": "בעיה", "en": "Problem"},
+  "xca": {"tag": "div", "he": "תרגיל", "en": "Exercise"},
+  "sol": {"tag": "div", "he": "פתרון", "en": "Solution"},
+  "rem": {"tag": "div", "he": "הערה", "en": "Remark"},
+  "claim": {"tag": "div", "he": "טענה", "en": "Claim"},
+  "proof": {"tag": "div", "he": "הוכחה", "en": "Proof"},
+  "casenv": {"tag": "div", "he": "מקרה", "en": "Case"},
+  "fact": {"tag": "div", "he": "עובדה", "en": "Fact"}
+}
