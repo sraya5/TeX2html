@@ -4,7 +4,7 @@ from sys import argv
 from read_LaTeX import parse_document
 from document import *
 
-with open('name2tag.json', 'r', encoding='utf8') as file:
+with open('name2tag.json', 'r', encoding='utf8') as f:
     NAME2TAG = load(f)
 
 
