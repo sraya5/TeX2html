@@ -7,7 +7,8 @@ class Node:
 
 
 class Environment(Node):
-    def __init__(self, environment_name: str):
+    def __init__(self, environment_name: str, children: list):
+        super().__init__(children)
         self.environment_name = environment_name
 
 
@@ -24,9 +25,12 @@ class Title:
 
 
 class Document(Environment):
-    def __init__(self, title: Title, children):
-        super().__init__(children)
-        self.environment_name = "document"
+    def __init__(self, title: Title, children: list):
+        super().__init__("document", children)
         self.title = title
 
+class Section(Node):
+    def __init__(self, children: list, sort):
+        super().__init__(children)
+        self.sort = sort
 
