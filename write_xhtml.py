@@ -10,13 +10,15 @@ with open('name2tag.json', 'r', encoding='utf8') as f:
 
 def one_node(node):
     if type(node) is Environment:
-        element = Element(NAME2TAG[node.environment_name]['tag'], {'class': node.environment_name}, text='', tail='')
+        element = Element(NAME2TAG[node.environment_name]['tag'], {'class': node.environment_name})
     elif type(node) is Section:
-        element = Element('section', text='', tail='')
+        element = Element('section')
     elif type(node) is Document:
-        element = Element('body', text='', tail='')
+        element = Element('body')
     else:
         raise TypeError('invalid node')
+    element.text = ''
+    element.tail = ''
     return element
 
 
@@ -26,8 +28,9 @@ def scan(node):
     for child in node.children:
         if type(child) in (Environment, Section):
             last = scan(child)
+            element.append(last)
         elif type(child) is FreeText:
-            if last:
+            if last is not None:
                 last.tail += child.content
             else:
                 element.text += child.content
@@ -37,7 +40,8 @@ def scan(node):
 def create_head(title='', css_path=''):
     head = Element('head')
     if title:
-        element = Element('title', text=title)
+        element = Element('title')
+        element.text = title
         head.append(element)
     if css_path:
         element = Element('link', {'rel': "stylesheet", 'type': 'text/css', 'href': css_path})
@@ -66,8 +70,7 @@ def main():
         content = file.read()
         doc = parse_document(content)[0]
         tree = convert(doc)
-        tree.write(argv[2])
-
+        tree.write(argv[2], encoding='utf-8')
 
 if __name__ == '__main__':
     main()
